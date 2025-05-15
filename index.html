@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8" />
+  <title>حساب قوة الشد والضغط والانبعاج</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <h2>حاسبة قوة الشد والضغط والانبعاج للماسورة</h2>
+  
+  <label>قطر الماسورة (بوصة):</label>
+  <input type="number" id="diameter" step="0.1" min="1" /><br/>
+
+  <label>سماكة الماسورة (مم):</label>
+  <input type="number" id="thickness" step="0.1" min="0.1" /><br/>
+
+  <label>نوع الصلب:</label>
+  <select id="steel">
+    <option value="ST37">ST37 (σy=240 MPa, E=210000 MPa)</option>
+    <option value="ST44">ST44 (σy=270 MPa, E=220000 MPa)</option>
+    <option value="ST52">ST52 (σy=360 MPa, E=230000 MPa)</option>
+  </select><br/>
+
+  <label>طول العمود (مم):</label>
+  <input type="number" id="length" value="3000" /><br/>
+
+  <button id="calculateBtn">احسب</button>
+
+  <h3>النتائج:</h3>
+  <div id="results"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
